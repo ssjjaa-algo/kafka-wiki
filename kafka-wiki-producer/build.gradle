@@ -30,6 +30,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// https://mvnrepository.com/artifact/com.launchdarkly/okhttp-eventsource
+	implementation group: 'com.launchdarkly', name: 'okhttp-eventsource', version: '2.5.0'
+
 }
 
 tasks.named('test') {
