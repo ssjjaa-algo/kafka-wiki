@@ -39,3 +39,12 @@ services:
       - KAFKA_CLUSTERS_0_NAME=local
       - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka-1:29092
       - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper-1:32181
+
+  mysql:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wikimedia
+    ports:
+      - "3307:3306"
